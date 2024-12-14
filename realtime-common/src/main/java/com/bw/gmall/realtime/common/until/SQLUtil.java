@@ -7,7 +7,7 @@ public class SQLUtil {
                 "  'properties.group.id' = '" + groupId + "'," +
                 "  'topic' = '" + topic + "'," +
                 "  'properties.bootstrap.servers' = '" + Constant.KAFKA_BROKERS + "'," +
-                "  'scan.startup.mode' = 'latest-offset'," +
+                "  'scan.startup.mode' = 'earliest-offset'," + //earliest-offset latest-offset
                 "  'json.ignore-parse-errors' = 'true'," + // 当 json 解析失败的时候,忽略这条数据
                 "  'format' = 'json' " +
                 ")";
@@ -21,4 +21,17 @@ public class SQLUtil {
                 "  'format' = 'json' " +
                 ")";
     }
+    //
+    public static String getUpsertKafkaDDL(String topic){
+        return "with(" +
+                "  'connector' = 'upsert-kafka'," +
+                "  'topic' = '" + topic + "'," +
+                "  'properties.bootstrap.servers' = '" + Constant.KAFKA_BROKERS + "'," +
+                "  'key.json.ignore-parse-errors' = 'true'," +
+                "  'value.json.ignore-parse-errors' = 'true'," +
+                "  'key.format' = 'json', " +
+                "  'value.format' = 'json' " +
+                ")";
+    }
+
 }

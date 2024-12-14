@@ -50,7 +50,12 @@ public abstract class BaseApp {
                 env.fromSource(kafkaSource, WatermarkStrategy.noWatermarks(), "KafkaSource");
         // 处理逻辑
         handle(env,kafkaStream);
-        env.execute();
+
+        try {
+            env.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

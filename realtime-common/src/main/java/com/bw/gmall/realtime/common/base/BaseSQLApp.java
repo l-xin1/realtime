@@ -4,6 +4,7 @@ import com.bw.gmall.realtime.common.until.SQLUtil;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.runtime.state.hashmap.HashMapStateBackend;
 import org.apache.flink.streaming.api.CheckpointingMode;
+import org.apache.flink.streaming.api.environment.CheckpointConfig;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
@@ -15,7 +16,7 @@ public abstract class BaseSQLApp {
 
     public void start(int port,
                       int parallelism,
-                      String ck) {
+                      String ck)  {
         System.setProperty("HADOOP_USER_NAME", "hadoop");
 
         Configuration conf = new Configuration();
@@ -26,24 +27,30 @@ public abstract class BaseSQLApp {
 //        env.setStateBackend(new HashMapStateBackend());
 //
 //        // 2. 开启 checkpoint
-//        env.enableCheckpointing(5000);
+        // 开始检查点
+        env.enableCheckpointing(5000L, CheckpointingMode.EXACTLY_ONCE);
 //        // 3. 设置 checkpoint 模式: 精准一次
-//        env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
-//        // 4. checkpoint 存储
-//        env.getCheckpointConfig().setCheckpointStorage("hdfs://hadoop102:8020/rk/week2/" + ck);
+
 //        // 5. checkpoint 并发数
-//        env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
+        env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
 //        // 6. checkpoint 之间的最小间隔
-//        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
+        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(1000L);
 //        // 7. checkpoint 的超时时间
-//        env.getCheckpointConfig().setCheckpointTimeout(10000);
+        env.getCheckpointConfig().setCheckpointTimeout(10000L);
 //        // 8. job 取消的时候的, checkpoint 保留策略
-//        env.getCheckpointConfig().setExternalizedCheckpointCleanup(RETAIN_ON_CANCELLATION);
+        env.getCheckpointConfig().setExternalizedCheckpointCleanup(CheckpointConfig.ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
+//        //  checkpoint 存储
+        env.setStateBackend(new HashMapStateBackend());
+        env.getCheckpointConfig().setCheckpointStorage("hdfs://hadoop102:8020/rk6/week2/"+ck);
 
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(env);
 
         handle(env, tEnv);
 
+        try {
+            env.execute();
+        }catch (Exception e){
+        }
     }
 
     // 读取 ods_db
