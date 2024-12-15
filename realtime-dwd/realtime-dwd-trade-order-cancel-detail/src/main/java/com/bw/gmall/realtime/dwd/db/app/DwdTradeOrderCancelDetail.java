@@ -19,7 +19,7 @@ public class DwdTradeOrderCancelDetail extends BaseSQLApp {
     }
     @Override
     public void handle(StreamExecutionEnvironment env, StreamTableEnvironment tEnv) {
-        //tEnv.getConfig().setIdleStateRetention(Duration.ofSeconds(30 * 60 + 5));
+        tEnv.getConfig().setIdleStateRetention(Duration.ofSeconds(30 * 60 + 5));
 
         // 1. 读取 topic_db 数据
         readOdsDb(tEnv, Constant.TOPIC_DWD_TRADE_ORDER_CANCEL);

@@ -19,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,7 +67,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "问题",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.38606402",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
@@ -80,14 +81,14 @@
       <recent name="com.bw.gmall.realtime.dim.app" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.DwdTradeOrderCancelDetail">
-    <configuration name="DwdBaseLog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="应用程序.DwsTradeCartAddUuWindow">
+    <configuration name="DwdBaseDb (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.log.split.DwdBaseLog" />
-      <module name="realtime-dwd-base-log" />
+      <option name="MAIN_CLASS_NAME" value="om.bw.gmall.realtime.dwd.db.split.app.DwdBaseDb" />
+      <module name="realtime-dwd-base-db" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bw.gmall.realtime.dwd.log.split.*" />
+          <option name="PATTERN" value="om.bw.gmall.realtime.dwd.db.split.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,13 +96,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdInteractionCommentInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwdBaseDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.db.app.DwdInteractionCommentInfo" />
-      <module name="realtime-dwd-interaction-comment-info" />
+      <option name="MAIN_CLASS_NAME" value="om.bw.gmall.realtime.dwd.db.split.app.DwdBaseDb" />
+      <module name="realtime-dwd-base-db" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.db.app.*" />
+          <option name="PATTERN" value="om.bw.gmall.realtime.dwd.db.split.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,10 +124,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderCancelDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwdTradeRefundPaySucDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.db.app.DwdTradeOrderCancelDetail" />
-      <module name="realtime-dwd-trade-order-cancel-detail" />
+      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.db.app.DwdTradeRefundPaySucDetail" />
+      <module name="realtime-dwd-trade-refund-pay-suc-detail" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bw.gmall.realtime.dwd.db.app.*" />
@@ -137,13 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DwdTradeOrderDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DwsTradeCartAddUuWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.db.app.DwdTradeOrderDetail" />
-      <module name="realtime-dwd-trade-order-detail" />
+      <option name="MAIN_CLASS_NAME" value="com.lx.gmall.realtime.dws.app.DwsTradeCartAddUuWindow" />
+      <module name="realtime-dws-trade-cart-add-uu-window" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bw.gmall.realtime.dwd.db.app.*" />
+          <option name="PATTERN" value="com.lx.gmall.realtime.dws.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,34 +172,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.bw.gmall.realtime.dim.app.DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dim.app.DimApp" />
-      <module name="realtime-dim" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bw.gmall.realtime.dim.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="应用程序.com.bw.gmall.realtime.dim.app.DimApp" />
+      <item itemvalue="应用程序.DwdBaseDb" />
+      <item itemvalue="应用程序.DwdBaseDb (1)" />
+      <item itemvalue="应用程序.DwdTradeRefundPaySucDetail" />
+      <item itemvalue="应用程序.DwsTradeCartAddUuWindow" />
       <item itemvalue="应用程序.DwdTradeCartAdd" />
-      <item itemvalue="应用程序.DwdTradeOrderCancelDetail" />
-      <item itemvalue="应用程序.DwdTradeOrderDetail" />
-      <item itemvalue="应用程序.DwdBaseLog" />
-      <item itemvalue="应用程序.DwdInteractionCommentInfo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.DwdTradeOrderCancelDetail" />
-        <item itemvalue="应用程序.DwdTradeOrderDetail" />
-        <item itemvalue="应用程序.DwdInteractionCommentInfo" />
+        <item itemvalue="应用程序.DwsTradeCartAddUuWindow" />
         <item itemvalue="应用程序.DwdTradeCartAdd" />
-        <item itemvalue="应用程序.DwdBaseLog" />
+        <item itemvalue="应用程序.DwdTradeRefundPaySucDetail" />
+        <item itemvalue="应用程序.DwdBaseDb (1)" />
+        <item itemvalue="应用程序.DwdBaseDb" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +207,11 @@
       <workItem from="1734050206209" duration="95000" />
       <workItem from="1734050307464" duration="39044000" />
       <workItem from="1734136452264" duration="9859000" />
+      <workItem from="1734228868178" duration="6359000" />
+      <workItem from="1734259328520" duration="3627000" />
+      <workItem from="1734266196798" duration="352000" />
+      <workItem from="1734266930586" duration="49000" />
+      <workItem from="1734267107544" duration="1346000" />
     </task>
     <servers />
   </component>

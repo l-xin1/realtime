@@ -79,7 +79,7 @@ public class DwdTradeOrderDetail extends BaseSQLApp {
                         "and `table`='order_detail_coupon' " +
                         "and `type`='insert' ");
         tEnv.createTemporaryView("order_detail_coupon", orderDetailCoupon);
-        //orderDetailCoupon.execute().print();
+        orderDetailCoupon.execute().print();
 
         // 6. 四张表 join:
         Table result = tEnv.sqlQuery(

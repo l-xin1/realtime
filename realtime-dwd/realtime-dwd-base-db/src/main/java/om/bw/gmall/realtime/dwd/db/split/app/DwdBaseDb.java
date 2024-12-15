@@ -100,7 +100,7 @@ public class DwdBaseDb extends BaseApp {
                         // 1. 去 mysql 中查询 table_process 表所有数据
                         java.sql.Connection mysqlConn = JdbcUtil.getMysqlConnection();
                         List<TableProcessDwd> tableProcessDwdList = JdbcUtil.queryList(mysqlConn,
-                                "select * from gmall2023_config.table_process_dwd",
+                                "select * from gmall2022_config.table_process_dwd",
                                 TableProcessDwd.class,
                                 true
                         );
@@ -171,8 +171,8 @@ public class DwdBaseDb extends BaseApp {
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(Constant.MYSQL_HOST)
                 .port(Constant.MYSQL_PORT)
-                .databaseList("gmall2023_config") // set captured database, If you need to synchronize the whole database, Please set tableList to ".*".
-                .tableList("gmall2023_config.table_process_dwd") // set captured table
+                .databaseList("gmall2022_config") // set captured database, If you need to synchronize the whole database, Please set tableList to ".*".
+                .tableList("gmall2022_config.table_process_dwd") // set captured table
                 .username(Constant.MYSQL_USER_NAME)
                 .password(Constant.MYSQL_PASSWORD)
                 .jdbcProperties(props)

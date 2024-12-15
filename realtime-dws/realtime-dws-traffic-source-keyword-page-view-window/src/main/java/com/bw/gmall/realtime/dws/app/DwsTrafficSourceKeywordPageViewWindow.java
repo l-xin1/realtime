@@ -15,7 +15,7 @@ public class DwsTrafficSourceKeywordPageViewWindow extends BaseSQLApp {
                 .start(10021,1,"dws_traffic_source_keyword_page_view_window");
     }
 
-
+//运行DwdBaseLog、DwsTrafficSourceKeywordPageViewWindow
     @Override
     public void handle(StreamExecutionEnvironment env, StreamTableEnvironment tEnv) {
 // 1. 读取 页面日志

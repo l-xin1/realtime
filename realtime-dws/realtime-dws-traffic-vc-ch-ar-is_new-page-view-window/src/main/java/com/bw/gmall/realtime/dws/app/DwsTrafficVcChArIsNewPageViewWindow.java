@@ -38,25 +38,25 @@ public class  DwsTrafficVcChArIsNewPageViewWindow extends BaseApp {
                 Constant.TOPIC_DWD_TRAFFIC_PAGE
         );
     }
-
+// 运行DwdBaseLog、DwsTrafficVcChArIsNewPageViewWindow
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> stream) {
         // 1. 解析数据, 封装 pojo 中
         SingleOutputStreamOperator<TrafficPageViewBean> beanStream = parseToPojo(stream);
         // 2. 开窗聚合
         SingleOutputStreamOperator<TrafficPageViewBean> result = windowAndAgg(beanStream);
-
+        result.print();
         // 3. 写出到 doris 中
-        writeToDoris(result);
+//        writeToDoris(result);
     }
 
-    private void writeToDoris(SingleOutputStreamOperator<TrafficPageViewBean> result) {
-
-        result
-                .map(new DorisMapFunction<>())
-                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_traffic_vc_ch_ar_is_new_page_view_window", "dws_traffic_vc_ch_ar_is_new_page_view_window"));
-
-    }
+//    private void writeToDoris(SingleOutputStreamOperator<TrafficPageViewBean> result) {
+//
+//        result
+//                .map(new DorisMapFunction<>())
+//                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_traffic_vc_ch_ar_is_new_page_view_window", "dws_traffic_vc_ch_ar_is_new_page_view_window"));
+//
+//    }
 
     private SingleOutputStreamOperator<TrafficPageViewBean> windowAndAgg(
             SingleOutputStreamOperator<TrafficPageViewBean> beanStream) {

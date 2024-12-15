@@ -41,4 +41,5 @@ public class Constant {
 
     public static final String DORIS_DATABASE = "gmall2022_realtime";
 
+    public static final Integer TWO_DAY_SECONDS = 10000;
 }
