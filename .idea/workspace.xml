@@ -75,6 +75,14 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="3044c320-6920-45bf-bae9-7e6d61bafd28" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3044c320-6920-45bf-bae9-7e6d61bafd28" />
+        <option name="url" value="git@github.com:l-xin1/gmall2022.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
