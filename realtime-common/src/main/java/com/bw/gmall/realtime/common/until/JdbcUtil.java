@@ -68,5 +68,11 @@ public class JdbcUtil {
         }
         return result;
     }
+    public static void closeConnection(Connection conn) throws SQLException {
+        if (conn != null && !conn.isClosed()) {
+            conn.close();
+        }
+    }
+
 
 }

@@ -221,8 +221,7 @@ public class DwdBaseLog extends BaseApp {
                             return false;
                         }
                     }
-                })
-                .map(JSON::parseObject);
+                }).map(JSON::parseObject);
     }
 }
 

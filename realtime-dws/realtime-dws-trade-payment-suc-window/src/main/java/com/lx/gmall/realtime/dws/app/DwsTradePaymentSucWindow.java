@@ -108,9 +108,9 @@ public class DwsTradePaymentSucWindow extends BaseApp {
                                 out.collect(bean);
                             }
                         }
-                ).print();
-//                .map(new DorisMapFunction<>())
-//                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_trade_payment_suc_window", "dws_trade_payment_suc_window"));
+                )
+                .map(new DorisMapFunction<>())
+                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_trade_payment_suc_window", "dws_trade_payment_suc_window"));
 
     }
 }

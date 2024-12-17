@@ -15,6 +15,7 @@
         <module name="realtime-dws-user-user-login-window" />
         <module name="realtime-dwd-trade-order-detail" />
         <module name="realtime-dws-trade-province-order-window" />
+        <module name="reatlime-publisher" />
         <module name="realtime-dwd-interaction-comment-info" />
         <module name="realtime-dws-trade-payment-suc-window" />
         <module name="realtime-common" />

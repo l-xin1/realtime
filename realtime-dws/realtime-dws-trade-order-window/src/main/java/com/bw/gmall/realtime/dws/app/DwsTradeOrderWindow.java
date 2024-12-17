@@ -38,6 +38,7 @@ public class DwsTradeOrderWindow extends BaseApp {
     public static void main(String[] args) throws Exception {
         new DwsTradeOrderWindow().start(10028,1,
                 "dws_trade_order_window",
+
                 Constant.TOPIC_DWD_TRADE_ORDER_DETAIL );
     }
 
@@ -111,9 +112,9 @@ public class DwsTradeOrderWindow extends BaseApp {
                                 out.collect(bean);
                             }
                         }
-                ).print();
-//                .map(new DorisMapFunction<>())
-//                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_trade_order_window", "dws_trade_order_window"));
+                )
+                .map(new DorisMapFunction<>())
+                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_trade_order_window", "dws_trade_order_window"));
 
 
     }

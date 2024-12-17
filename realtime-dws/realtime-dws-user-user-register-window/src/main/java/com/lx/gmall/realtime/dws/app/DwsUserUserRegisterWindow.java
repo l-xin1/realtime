@@ -9,6 +9,7 @@ import com.bw.gmall.realtime.common.function.DorisMapFunction;
 import com.bw.gmall.realtime.common.until.DateFormatUtil;
 import com.bw.gmall.realtime.common.until.FlinkSinkUtil;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.AggregateFunction;
@@ -31,7 +32,7 @@ public class DwsUserUserRegisterWindow extends BaseApp {
     //运行DwdBaseDb、DwsUserUserRegisterWindow
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> stream) {
-        stream
+        SingleOutputStreamOperator<UserRegisterBean> res_user = stream
                 .map(JSON::parseObject)
                 .assignTimestampsAndWatermarks(
                         WatermarkStrategy
@@ -77,9 +78,10 @@ public class DwsUserUserRegisterWindow extends BaseApp {
 
                             }
                         }
-                ).print();
-//                .map(new DorisMapFunction<>())
-//                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_user_user_register_window", "dws_user_user_register_window"));
+                );
+        res_user.print();
+        res_user.map(new DorisMapFunction<>())
+                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_user_user_register_window", "dws_user_user_register_window"));
 
     }
 }

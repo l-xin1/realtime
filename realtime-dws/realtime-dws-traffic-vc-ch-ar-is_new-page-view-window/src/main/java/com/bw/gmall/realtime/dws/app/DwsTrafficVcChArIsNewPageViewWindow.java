@@ -47,16 +47,16 @@ public class  DwsTrafficVcChArIsNewPageViewWindow extends BaseApp {
         SingleOutputStreamOperator<TrafficPageViewBean> result = windowAndAgg(beanStream);
         result.print();
         // 3. 写出到 doris 中
-//        writeToDoris(result);
+        writeToDoris(result);
     }
 
-//    private void writeToDoris(SingleOutputStreamOperator<TrafficPageViewBean> result) {
-//
-//        result
-//                .map(new DorisMapFunction<>())
-//                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_traffic_vc_ch_ar_is_new_page_view_window", "dws_traffic_vc_ch_ar_is_new_page_view_window"));
-//
-//    }
+    private void writeToDoris(SingleOutputStreamOperator<TrafficPageViewBean> result) {
+
+        result
+                .map(new DorisMapFunction<>())
+                .sinkTo(FlinkSinkUtil.getDorisSink(Constant.DORIS_DATABASE + ".dws_traffic_vc_ch_ar_is_new_page_view_window", "dws_traffic_vc_ch_ar_is_new_page_view_window"));
+
+    }
 
     private SingleOutputStreamOperator<TrafficPageViewBean> windowAndAgg(
             SingleOutputStreamOperator<TrafficPageViewBean> beanStream) {

@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6f21ff2-17b2-472a-a01d-5e4dbb3978f2" name="Changes" comment="" />
+    <list default="true" id="e6f21ff2-17b2-472a-a01d-5e4dbb3978f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyReport/实训一.md" beforeDir="false" afterPath="$PROJECT_DIR$/DailyReport/实训一.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseSQLApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseSQLApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/FlinkSinkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/FlinkSinkUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/JdbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseSQLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseSQLApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/constant/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/constant/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/FlinkSinkUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/FlinkSinkUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/JdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/JdbcUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dim/target/classes/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dim/target/classes/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/src/main/java/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/src/main/java/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/src/main/java/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/src/main/java/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/target/classes/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/target/classes/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-source-keyword-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficSourceKeywordPageViewWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-source-keyword-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficSourceKeywordPageViewWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,8 +69,11 @@
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="dev" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="17c0a80b-1547-42fd-b784-83883781bcb9" />
+    <option name="defaultAccountId" value="3044c320-6920-45bf-bae9-7e6d61bafd28" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,110 +100,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/cdh/gmall2023-realtime-dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38606402&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/cdh/gmall2023-realtime-dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.38606402",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "f28c0da7f42b3ce18d31f2754a1470f7"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "hive"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\cdh\gmall2023-realtime-dev\reatlime-publisher\src\main\java\com\lx\reatlimepublisher" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-publisher" />
       <recent name="D:\mmmm\ideam\gmall2022-realtime\realtime-common\src\main\java\com\bw\gmall\realtime\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bw.gmall.realtime.dim.app" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.DwsTradeCartAddUuWindow">
-    <configuration name="DwdBaseDb (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="om.bw.gmall.realtime.dwd.db.split.app.DwdBaseDb" />
-      <module name="realtime-dwd-base-db" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="om.bw.gmall.realtime.dwd.db.split.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwdBaseDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="om.bw.gmall.realtime.dwd.db.split.app.DwdBaseDb" />
-      <module name="realtime-dwd-base-db" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="om.bw.gmall.realtime.dwd.db.split.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwdTradeCartAdd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.realtime.dwd.db.app.DwdTradeCartAdd" />
-      <module name="realtime-dwd-trade-cart-add" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.realtime.dwd.db.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwdTradeRefundPaySucDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.db.app.DwdTradeRefundPaySucDetail" />
-      <module name="realtime-dwd-trade-refund-pay-suc-detail" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bw.gmall.realtime.dwd.db.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DwsTradeCartAddUuWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.lx.gmall.realtime.dws.app.DwsTradeCartAddUuWindow" />
-      <module name="realtime-dws-trade-cart-add-uu-window" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lx.gmall.realtime.dws.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.bw.gmall.realtime.dim.app.DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.ReatlimePublisherApplication">
+    <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dim.app.DimApp" />
       <module name="realtime-dim" />
@@ -172,25 +156,88 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DwdTradeOrderDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dwd.db.app.DwdTradeOrderDetail" />
+      <module name="realtime-dwd-trade-order-detail" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bw.gmall.realtime.dwd.db.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsTradeSkuOrderWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.lx.gmall.realtime.dws.app.DwsTradeSkuOrderWindow" />
+      <module name="realtime-dws-trade-sku-order-window" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lx.gmall.realtime.dws.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DwsTrafficVcChArIsNewPageViewWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dws.app.DwsTrafficVcChArIsNewPageViewWindow" />
+      <module name="realtime-dws-traffic-vc-ch-ar-is_new-page-view-window" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bw.gmall.realtime.dws.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReatlimePublisherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="reatlime-publisher" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lx.reatlimepublisher.ReatlimePublisherApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lx.reatlimepublisher.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="应用程序.com.bw.gmall.realtime.dim.app.DimApp" />
-      <item itemvalue="应用程序.DwdBaseDb" />
-      <item itemvalue="应用程序.DwdBaseDb (1)" />
-      <item itemvalue="应用程序.DwdTradeRefundPaySucDetail" />
-      <item itemvalue="应用程序.DwsTradeCartAddUuWindow" />
-      <item itemvalue="应用程序.DwdTradeCartAdd" />
+      <item itemvalue="Spring Boot.ReatlimePublisherApplication" />
+      <item itemvalue="应用程序.DimApp" />
+      <item itemvalue="应用程序.DwdTradeOrderDetail" />
+      <item itemvalue="应用程序.DwsTradeSkuOrderWindow" />
+      <item itemvalue="应用程序.DwsTrafficVcChArIsNewPageViewWindow" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.DwsTradeCartAddUuWindow" />
-        <item itemvalue="应用程序.DwdTradeCartAdd" />
-        <item itemvalue="应用程序.DwdTradeRefundPaySucDetail" />
-        <item itemvalue="应用程序.DwdBaseDb (1)" />
-        <item itemvalue="应用程序.DwdBaseDb" />
+        <item itemvalue="Spring Boot.ReatlimePublisherApplication" />
+        <item itemvalue="应用程序.DwsTradeSkuOrderWindow" />
+        <item itemvalue="应用程序.DwdTradeOrderDetail" />
+        <item itemvalue="应用程序.DimApp" />
+        <item itemvalue="应用程序.DwsTrafficVcChArIsNewPageViewWindow" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e6f21ff2-17b2-472a-a01d-5e4dbb3978f2" name="Changes" comment="" />
@@ -212,7 +259,16 @@
       <workItem from="1734266196798" duration="352000" />
       <workItem from="1734266930586" duration="49000" />
       <workItem from="1734267107544" duration="1908000" />
-      <workItem from="1734269612621" duration="1371000" />
+      <workItem from="1734269612621" duration="1769000" />
+      <workItem from="1734309764883" duration="1246000" />
+      <workItem from="1734311349987" duration="2777000" />
+      <workItem from="1734314834626" duration="1026000" />
+      <workItem from="1734315866322" duration="32000" />
+      <workItem from="1734316797984" duration="6194000" />
+      <workItem from="1734330124917" duration="4891000" />
+      <workItem from="1734338779999" duration="6680000" />
+      <workItem from="1734352385912" duration="5484000" />
+      <workItem from="1734396415749" duration="417000" />
     </task>
     <servers />
   </component>

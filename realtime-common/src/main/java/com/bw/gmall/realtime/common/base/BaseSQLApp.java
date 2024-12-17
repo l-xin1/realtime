@@ -21,6 +21,7 @@ public abstract class BaseSQLApp {
 
         Configuration conf = new Configuration();
         conf.setInteger("rest.port", port);
+
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment(conf);
         env.setParallelism(parallelism);
         // 1. 设置状态后端
@@ -28,17 +29,17 @@ public abstract class BaseSQLApp {
 //
 //        // 2. 开启 checkpoint
         // 开始检查点
-//        env.enableCheckpointing(5000L, CheckpointingMode.EXACTLY_ONCE);
-//        // 3. 设置 checkpoint 模式: 精准一次
-
-//        // 5. checkpoint 并发数
+//        env.enableCheckpointing(5000L);
+////        // 3. 设置 checkpoint 模式: 精准一次
+//        env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+////        // 5. checkpoint 并发数
 //        env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
 //        // 6. checkpoint 之间的最小间隔
-//        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(1000L);
+//        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
 //        // 7. checkpoint 的超时时间
-//        env.getCheckpointConfig().setCheckpointTimeout(10000L);
+//        env.getCheckpointConfig().setCheckpointTimeout(10000);
 //        // 8. job 取消的时候的, checkpoint 保留策略
-//        env.getCheckpointConfig().setExternalizedCheckpointCleanup(CheckpointConfig.ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
+//        env.getCheckpointConfig().setExternalizedCheckpointCleanup(RETAIN_ON_CANCELLATION);
 //        //  checkpoint 存储
 //        env.setStateBackend(new HashMapStateBackend());
 //        env.getCheckpointConfig().setCheckpointStorage("hdfs://hadoop102:8020/rk6/week2/"+ck);

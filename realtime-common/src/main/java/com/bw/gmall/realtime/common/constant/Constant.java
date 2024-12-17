@@ -37,9 +37,9 @@ public class Constant {
 
     public static final String TOPIC_DWD_USER_REGISTER = "dwd_user_register";
     //doris地址
-    public static final String DORIS_FE_NODES ="hadoop102:7030,hadoop103:7030,hadoop104:7030";
+    public static final String DORIS_FE_NODES ="10.39.48.33:8030";
 
-    public static final String DORIS_DATABASE = "gmall2022_realtime";
+    public static final String DORIS_DATABASE = "dev_lx";
 
     public static final Integer TWO_DAY_SECONDS = 10000;
 }

@@ -112,7 +112,7 @@ public class DwdBaseDb extends BaseApp {
 
 
                         }
-                        JdbcUtil.closeMysqlConnection(mysqlConn);
+                        JdbcUtil.closeConnection(mysqlConn);
                     }
 
                     // 4. 处理数据流中的数据: 从广播状态中读取配置信息
@@ -130,6 +130,7 @@ public class DwdBaseDb extends BaseApp {
                                 System.out.println("在 map 中查找到 " + key);
                             }
                         } else {
+
                             System.out.println("在 状态 中查找到 " + key);
                         }
                         if (tableProcessDwd != null) { // 这条数据找到了对应的配置信息
@@ -214,14 +215,15 @@ public class DwdBaseDb extends BaseApp {
                             String data = obj.getString("data");
 
 
-                            return "gmall".equals(db)
+                            return "gmall2022".equals(db)
                                     && ("insert".equals(type)
                                     || "update".equals(type))
                                     && data != null
                                     && data.length() > 2;
 
                         } catch (Exception e) {
-                            System.out.println("不是正确的 json 格式的数据: " + value);
+
+                            System.out.println("不是正确的 json 格式的数据: +"+ value);
                             return false;
                         }
 

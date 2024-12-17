@@ -66,8 +66,8 @@ public class FlinkSinkUtil {
                 .setDorisOptions(DorisOptions.builder() // 设置 doris 的连接参数
                         .setFenodes(Constant.DORIS_FE_NODES)
                         .setTableIdentifier(table)
-                        .setUsername("root")
-                        .setPassword("123456")
+                        .setUsername("admin")
+                        .setPassword("zh1028,./")
                         .build()
                 )
                 .setDorisExecutionOptions(DorisExecutionOptions.builder() // 执行参数

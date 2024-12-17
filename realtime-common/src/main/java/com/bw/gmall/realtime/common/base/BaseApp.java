@@ -26,19 +26,25 @@ public abstract class BaseApp {
         //设置并行度
         env.setParallelism(parallelism);
         // 开始检查点
-//        env.enableCheckpointing(5000L, CheckpointingMode.EXACTLY_ONCE);
-////         设置job取消检查是否保留
-//        env.getCheckpointConfig().setExternalizedCheckpointCleanup(CheckpointConfig.ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
-////         设置两个检查点之间最小间距
-//        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(2000L);
+//        env.enableCheckpointing(5000);
+//       //  1.4.3 设置 checkpoint 模式: 精准一次
+//        env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+//        // 1.4.5 checkpoint 并发数
+//        env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
+//         //1.4.6 checkpoint 之间的最小间隔
+//        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(5000);
+//        // 1.4.7 checkpoint  的超时时间
+//        env.getCheckpointConfig().setCheckpointTimeout(10000);
+//        // 1.4.8 job 取消时 checkpoint 保留策略
+//        env.getCheckpointConfig().setExternalizedCheckpointCleanup(RETAIN_ON_CANCELLATION);
 ////         设置重启
 //        env.setRestartStrategy(RestartStrategies.failureRateRestart(3, Time.days(30),Time.seconds(3)));
 ////        设置状态后端 和检查点储存路径
-        env.setStateBackend(new HashMapStateBackend());
+//        env.setStateBackend(new HashMapStateBackend());
 //        env.getCheckpointConfig().setCheckpointStorage("hdfs://hadoop102:8020/rk6/week2/"+ckAndGroupId);
-//
-////        设置操作hadoop的用户
-//        System.setProperty("Hadoop_USER_NAME","hadoop");
+////
+//////        设置操作hadoop的用户
+        System.setProperty("Hadoop_USER_NAME","hadoop");
 
 
         //TODO 从kafka读取topic_db数据

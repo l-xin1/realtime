@@ -27,7 +27,7 @@ public class HBaseSinkFunction extends RichSinkFunction<Tuple2<JSONObject, Table
     @Override
     public void close() throws Exception {
         HBaseUtil.closeHBaseConn(hbaseConn);
-        RedisUtil.closeJedis(jedis);
+//        RedisUtil.closeJedis(jedis);
     }
 
     // 将流中的数据写入到hbase里
