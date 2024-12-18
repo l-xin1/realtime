@@ -4,48 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6f21ff2-17b2-472a-a01d-5e4dbb3978f2" name="Changes" comment="">
+    <list default="true" id="e6f21ff2-17b2-472a-a01d-5e4dbb3978f2" name="Changes" comment="dev-v1-17">
+      <change afterPath="$PROJECT_DIR$/DailyReport/自我简介.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/cotroller/TradeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/cotroller/TrafficController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/mapper/TradeStatsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/mapper/TrafficChannelStatsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/service/TradeStatsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/service/TrafficChannelStatsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/service/impl/TradeStatsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/realtime-pus/src/main/java/com/example/realtimepus/service/impl/TrafficChannelStatsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DailyReport/实训一.md" beforeDir="false" afterPath="$PROJECT_DIR$/DailyReport/实训一.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseSQLApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseSQLApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/FlinkSinkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/FlinkSinkUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/until/JdbcUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseSQLApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/base/BaseSQLApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/constant/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/constant/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/FlinkSinkUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/FlinkSinkUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/JdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/target/classes/com/bw/gmall/realtime/common/until/JdbcUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dim/target/classes/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dim/target/classes/com/bw/gmall/realtime/dim/function/HBaseSinkFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/src/main/java/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/src/main/java/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-db/target/classes/om/bw/gmall/realtime/dwd/db/split/app/DwdBaseDb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/src/main/java/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/src/main/java/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/target/classes/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/realtime-dwd-base-log/target/classes/com/bw/gmall/realtime/dwd/log/split/DwdBaseLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-cart-add-uu-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradeCartAddUuWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-order-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTradeOrderWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-trade-payment-suc-window/target/classes/com/lx/gmall/realtime/dws/app/DwsTradePaymentSucWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-source-keyword-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficSourceKeywordPageViewWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-source-keyword-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficSourceKeywordPageViewWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/src/main/java/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-traffic-vc-ch-ar-is_new-page-view-window/target/classes/com/bw/gmall/realtime/dws/app/DwsTrafficVcChArIsNewPageViewWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/src/main/java/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/realtime-dws-user-user-register-window/target/classes/com/lx/gmall/realtime/dws/app/DwsUserUserRegisterWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/ReatlimePublisherApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/bean/TradeProvinceOrderAmount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/bean/TrafficUvCt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/controller/TradeStatsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/controller/TrafficStatsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/mapper/TradeStatsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/mapper/TrafficStatsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/service/TradeStatsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/service/TrafficStatsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/service/impl/TradeStatsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/service/impl/TrafficStatsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/main/java/com/lx/reatlimepublisher/util/DateFormatUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reatlime-publisher/src/test/java/com/lx/reatlimepublisher/ReatlimePublisherApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +86,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -118,7 +107,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/cdh/gmall2023-realtime-dev",
+    "js.buildTools.gulp.gulp_package_dir": "",
+    "last_opened_file_path": "D:/cdh/gmall2023-realtime-dev/ncLK",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,8 +117,8 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.38606402",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "spring.configuration.checksum": "f28c0da7f42b3ce18d31f2754a1470f7"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "f63ad9888e7a27c8f6f4c1bbe41cd048"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -141,15 +131,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\cdh\gmall2023-realtime-dev\reatlime-publisher\src\main\java\com\lx\reatlimepublisher" />
-      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-publisher" />
-      <recent name="D:\mmmm\ideam\gmall2022-realtime\realtime-common\src\main\java\com\bw\gmall\realtime\common" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\ncLK" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-pus\src\main\resources" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-pus\src\main\java\com\example\realtimepus" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-pus\src\main\java\com\example\realtimepus\bean" />
+      <recent name="D:\cdh\gmall2023-realtime-dev\realtime-api\src\main\java\com\lx\realtimeapi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="com.bw.gmall.realtime.dim.app" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReatlimePublisherApplication">
+  <component name="RunManager" selected="Spring Boot.RealtimePusApplication">
     <configuration name="DimApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.bw.gmall.realtime.dim.app.DimApp" />
@@ -212,12 +205,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReatlimePublisherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="reatlime-publisher" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lx.reatlimepublisher.ReatlimePublisherApplication" />
+    <configuration name="RealtimePusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="realtime-pus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realtimepus.RealtimePusApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lx.reatlimepublisher.*" />
+          <option name="PATTERN" value="com.example.realtimepus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -225,8 +218,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Spring Boot.ReatlimePublisherApplication" />
+      <item itemvalue="Spring Boot.RealtimePusApplication" />
       <item itemvalue="应用程序.DimApp" />
       <item itemvalue="应用程序.DwdTradeOrderDetail" />
       <item itemvalue="应用程序.DwsTradeSkuOrderWindow" />
@@ -234,7 +236,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ReatlimePublisherApplication" />
+        <item itemvalue="Spring Boot.RealtimePusApplication" />
         <item itemvalue="应用程序.DwsTradeSkuOrderWindow" />
         <item itemvalue="应用程序.DwdTradeOrderDetail" />
         <item itemvalue="应用程序.DimApp" />
@@ -243,6 +245,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -276,11 +281,35 @@
       <workItem from="1734330124917" duration="4891000" />
       <workItem from="1734338779999" duration="6680000" />
       <workItem from="1734352385912" duration="5484000" />
-      <workItem from="1734396415749" duration="417000" />
+      <workItem from="1734396415749" duration="2038000" />
+      <workItem from="1734400114864" duration="11033000" />
+      <workItem from="1734419480486" duration="1714000" />
+      <workItem from="1734424320322" duration="5895000" />
+      <workItem from="1734481867188" duration="941000" />
     </task>
+    <task id="LOCAL-00001" summary="dev17">
+      <created>1734396896706</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734396896706</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dev-v1-17">
+      <created>1734397124348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734397124348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dev17" />
+    <MESSAGE value="dev-v1-17" />
+    <option name="LAST_COMMIT_MESSAGE" value="dev-v1-17" />
   </component>
 </project>

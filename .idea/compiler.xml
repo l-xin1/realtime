@@ -13,9 +13,9 @@
         <module name="realtime-dws-trade-trademark-category-user-refund-window" />
         <module name="realtime-dws-traffic-source-keyword-page-view-window" />
         <module name="realtime-dws-user-user-login-window" />
+        <module name="realtime-pus" />
         <module name="realtime-dwd-trade-order-detail" />
         <module name="realtime-dws-trade-province-order-window" />
-        <module name="reatlime-publisher" />
         <module name="realtime-dwd-interaction-comment-info" />
         <module name="realtime-dws-trade-payment-suc-window" />
         <module name="realtime-common" />
@@ -32,5 +32,9 @@
         <module name="realtime-dwd-trade-order-cancel-detail" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="realtime-api" target="1.8" />
+      <module name="reatlime-publisher" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
