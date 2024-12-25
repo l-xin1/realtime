@@ -101,11 +101,11 @@ public class TestUdf01 {
 //        tpDS.print();
 
 
-//        MapStateDescriptor<String, JSONObject> mapStageDesc = new MapStateDescriptor<>("mapStageDesc", String.class, JSONObject.class);
-//        BroadcastStream<JSONObject> broadcastDs = tpDS.broadcast(mapStageDesc);
-//        BroadcastConnectedStream<JSONObject, JSONObject> connectDs = cdcDbMainStreamMap.connect(broadcastDs);
-//        SingleOutputStreamOperator<JSONObject> streamOperator = connectDs.process(new ProcessToHbase(mapStageDesc));
-//        streamOperator.print();
+        MapStateDescriptor<String, JSONObject> mapStageDesc = new MapStateDescriptor<>("mapStageDesc", String.class, JSONObject.class);
+        BroadcastStream<JSONObject> broadcastDs = tpDS.broadcast(mapStageDesc);
+        BroadcastConnectedStream<JSONObject, JSONObject> connectDs = cdcDbMainStreamMap.connect(broadcastDs);
+        SingleOutputStreamOperator<JSONObject> streamOperator = connectDs.process(new ProcessToHbase(mapStageDesc));
+        streamOperator.print();
 
 //        cdcDbMainStream.sinkTo(
 //                KafkaUtils.buildKafkaSink(ConfigUtils.getString("kafka.bootstrap.servers"),"realtime_v1_mysql_db")
