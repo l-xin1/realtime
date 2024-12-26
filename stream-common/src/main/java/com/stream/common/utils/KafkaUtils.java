@@ -47,13 +47,13 @@ public final class KafkaUtils {
         return props;
     }
 
-    public static Properties getKafkaConsumerProperties(String server, String groupId, String offset){
+    public static Properties getKafkaConsumerProperties(String server, String groupId, String offset) {
         Properties prop = new Properties();
-        prop.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,server);
-        prop.put(ConsumerConfig.GROUP_ID_CONFIG,groupId);
-        prop.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,offset);
+        prop.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, server);
+        prop.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
+        prop.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, offset);
         prop.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        prop.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
+        prop.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         return prop;
     }
 
@@ -71,20 +71,20 @@ public final class KafkaUtils {
         return props;
     }
 
-    public static void sinkJson2KafkaMessage(String topicName, ArrayList<JSONObject> jsonObjectArrayList){
+    public static void sinkJson2KafkaMessage(String topicName, ArrayList<JSONObject> jsonObjectArrayList) {
         Properties properties = buildPropsByProducer();
-        try(KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
+        try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
             for (JSONObject jsonObject : jsonObjectArrayList) {
-                producer.send(new ProducerRecord<>(topicName,jsonObject.toString()));
+                producer.send(new ProducerRecord<>(topicName, jsonObject.toString()));
             }
             System.out.println("数据已成功发送到Kafka主题: " + topicName);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.println("发送数据到Kafka主题时出现错误");
         }
     }
 
-    public static KafkaSource<String> buildKafkaSource(String bootServerList,String kafkaTopic,String group,OffsetsInitializer offset){
+    public static KafkaSource<String> buildKafkaSource(String bootServerList, String kafkaTopic, String group, OffsetsInitializer offset) {
         return KafkaSource.<String>builder()
                 .setBootstrapServers(bootServerList)
                 .setTopics(kafkaTopic)
@@ -99,7 +99,7 @@ public final class KafkaUtils {
         producerProperties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootServerList);
         producerProperties.setProperty(ProducerConfig.ACKS_CONFIG, "all");
         producerProperties.setProperty(ProducerConfig.RETRIES_CONFIG, String.valueOf(Integer.MAX_VALUE));
-        producerProperties.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG,"true");
+        producerProperties.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, "true");
         producerProperties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, org.apache.kafka.common.serialization.ByteArraySerializer.class.getName());
         producerProperties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, org.apache.kafka.common.serialization.ByteArraySerializer.class.getName());
 

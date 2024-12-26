@@ -45,7 +45,7 @@ public class TestLog {
                             public boolean filter(String s) throws Exception {
                                 try {
                                     if (s != null || s.length() > 0) {
-                                        // JSONObject.parseObject(s);
+                                        JSONObject.parseObject(s);
                                         return true;
                                     }
                                 } catch (Exception e) {
@@ -89,15 +89,18 @@ public class TestLog {
                                 state.update(dateFormat.format(ts - (24 * 60 * 60 * 1000)));
                             }
                         }
-
                         collector.collect(jsonObject);
                     }
                 }).uid("log_is_new_json_12").name("log_is_new_json_12").setParallelism(1);
 //        streamOperator.print();
-        OutputTag<JSONObject> page = new OutputTag<JSONObject>("page") {};
-        OutputTag<JSONObject> display = new OutputTag<JSONObject>("display") {};
-        OutputTag<JSONObject> action = new OutputTag<JSONObject>("action") {};
-        OutputTag<JSONObject> err = new OutputTag<JSONObject>("err") {};
+        OutputTag<JSONObject> page = new OutputTag<JSONObject>("page") {
+        };
+        OutputTag<JSONObject> display = new OutputTag<JSONObject>("display") {
+        };
+        OutputTag<JSONObject> action = new OutputTag<JSONObject>("action") {
+        };
+        OutputTag<JSONObject> err = new OutputTag<JSONObject>("err") {
+        };
         SingleOutputStreamOperator<JSONObject> outputStreamOperator = streamOperator.process(new ProcessFunction<JSONObject, JSONObject>() {
             @Override
             public void processElement(JSONObject jsonObject, ProcessFunction<JSONObject, JSONObject>.Context context, Collector<JSONObject> collector) throws Exception {
@@ -126,7 +129,7 @@ public class TestLog {
 //        outputStreamOperator.getSideOutput(display).print("display-?");
 
 //        outputStreamOperator.map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_start"));
-        outputStreamOperator.getSideOutput(page).map(JSONObject::toString).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_page"));
+        outputStreamOperator.getSideOutput(page).map(JSONObject::toString).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092", "topic_page"));
 //        outputStreamOperator.getSideOutput(err).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_err"));
 //        outputStreamOperator.getSideOutput(action).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_action"));
 //        outputStreamOperator.getSideOutput(display).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_display"));

@@ -29,10 +29,6 @@ public class ProcessToHbase extends BroadcastProcessFunction<JSONObject, JSONObj
     private final HashMap<String, TableProcessDim> configMap =  new HashMap<>();
     private org.apache.hadoop.hbase.client.Connection hbaseConnection ;
 
-
-
-
-
     @Override
     public void open(Configuration parameters) throws Exception {
         Connection connection = JdbcUtils.getMySQLConnection(

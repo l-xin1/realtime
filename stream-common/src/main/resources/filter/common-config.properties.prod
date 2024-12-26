@@ -8,6 +8,8 @@ mysql.url=jdbc:mysql://cdh03:3306?useSSL=false
 mysql.timezone=Asia/Shanghai
 mysql.database=gmall
 mysql.databases.conf=realtime_conf
+mysql.database.dwd=gmall_process
+mysql.table.dwd=gmall_process.table_process_dwd
 mysql.user=root
 mysql.pwd=root
 
@@ -17,3 +19,15 @@ zookeeper.server.host.list=cdh02:2181
 #Hbase
 hbase.namespace=gmall
 
+# kafka
+kafka.url=jdbc:mysql://cdh03:3306?useSSL=false
+Kafka.bootstrap.servers=cdh01:9092
+REALTIME.KAFKA.LOG.TOPIC=topic_log
+kafka.topic.group=sourceKafKaGroup
+kafka.topic.db=topic_db
+kafka.err.log=topic_err
+kafka.start.log=topic_start
+kafka.display.log=topic_display
+kafka.action.log=topic_action
+kafka.dirty.topic=topic_dirty
+kafka.page.topic=topic_page

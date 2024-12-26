@@ -3,14 +3,11 @@ package gmall.lx.realtime.test;
 import com.alibaba.fastjson.JSONObject;
 import com.retailersv1.MapUpdateHbaseDimTableFunc;
 import com.stream.common.utils.ConfigUtils;
+import com.stream.common.utils.KafkaUtils;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import com.ververica.cdc.connectors.mysql.table.StartupOptions;
 import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
-import gmall.lx.realtime.common.JsonDeserializationSchemaUtil;
-import gmall.lx.realtime.common.MyDeserializationSchemaFunction;
 import gmall.lx.realtime.common.ProcessToHbase;
-import gmall.lx.realtime.constant.Constant;
-import lombok.SneakyThrows;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.state.MapStateDescriptor;
 import org.apache.flink.streaming.api.datastream.BroadcastConnectedStream;
@@ -18,16 +15,13 @@ import org.apache.flink.streaming.api.datastream.BroadcastStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.co.BroadcastProcessFunction;
-import org.apache.flink.util.Collector;
 
-import java.util.Properties;
 
 /**
- * @className: TestUdf01
- * @Description: TODO
- * @author: lx
- * @date: 2024/12/21 09:11
+ * : TestUdf01
+ * : TODO
+ * : lx
+ * : 2024/12/21 09:11
  */
 public class TestUdf01 {
 
@@ -107,9 +101,9 @@ public class TestUdf01 {
         SingleOutputStreamOperator<JSONObject> streamOperator = connectDs.process(new ProcessToHbase(mapStageDesc));
         streamOperator.print();
 
-//        cdcDbMainStream.sinkTo(
-//                KafkaUtils.buildKafkaSink(ConfigUtils.getString("kafka.bootstrap.servers"),"realtime_v1_mysql_db")
-//        ).uid("sink_to_kafka_realtime_v1_mysql_db").name("sink_to_kafka_realtime_v1_mysql_db");
+        cdcDbMainStream.sinkTo(
+                KafkaUtils.buildKafkaSink(ConfigUtils.getString("kafka.bootstrap.servers"),"realtime_v1_mysql_db")
+        ).uid("sink_to_kafka_realtime_v1_mysql_db").name("sink_to_kafka_realtime_v1_mysql_db");
 
         env.disableOperatorChaining();
         env.execute();
