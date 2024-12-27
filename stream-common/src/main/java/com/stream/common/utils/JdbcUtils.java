@@ -1,6 +1,8 @@
 package com.stream.common.utils;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.CaseFormat;
+import lombok.SneakyThrows;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.sql.*;
@@ -34,6 +36,7 @@ public class JdbcUtils {
         if (isUnderlineToCamel.length > 0) {
             defaultIsUToC = isUnderlineToCamel[0];
         }
+
         PreparedStatement ps = conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         ResultSetMetaData metaData = rs.getMetaData();
@@ -51,7 +54,6 @@ public class JdbcUtils {
             }
             resList.add(obj);
         }
-
         return resList;
     }
 

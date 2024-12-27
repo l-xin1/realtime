@@ -31,3 +31,10 @@ kafka.display.log=topic_display
 kafka.action.log=topic_action
 kafka.dirty.topic=topic_dirty
 kafka.page.topic=topic_page
+
+
+
+# flink
+flink.submit.user=
+flink.conf.configurationDirectory=
+flink.cluster.libs=
