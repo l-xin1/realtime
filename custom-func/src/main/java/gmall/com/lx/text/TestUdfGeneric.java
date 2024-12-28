@@ -19,54 +19,51 @@ import java.util.regex.Pattern;
  * @author: lx
  * @date: 2024/12/23 19:56
  */
-@Description(name = "validate_id_card",value = "A custom UDF to validate Chinese ID Card number")
+@Description(name = "validate_id_card", value = "A custom UDF to validate Chinese ID Card number")
 public class TestUdfGeneric extends GenericUDF {
-    private static final int[] WEIGHT_FACTOR={7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
-    private static final char[] CHECK_CODE= {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
-
-
+    private static final int[] WEIGHT_FACTOR = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
+    private static final char[] CHECK_CODE = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
 
 
     @Override
     public ObjectInspector initialize(ObjectInspector[] objectInspectors) throws UDFArgumentException {
-        if (objectInspectors.length!=1){
+        if (objectInspectors.length != 1) {
             throw new UDFArgumentLengthException("The function validate_id_card expects exactly 1 argument. ");
         }
 
-        if (!(objectInspectors[0] instanceof PrimitiveObjectInspector)){
-            throw new UDFArgumentTypeException(0,"The argument of function validate_id_card should be a string");
+        if (!(objectInspectors[0] instanceof PrimitiveObjectInspector)) {
+            throw new UDFArgumentTypeException(0, "The argument of function validate_id_card should be a string");
         }
 
-        PrimitiveObjectInspector inputOI =(PrimitiveObjectInspector)  objectInspectors[0];
-        if (inputOI.getPrimitiveCategory() != PrimitiveObjectInspector.PrimitiveCategory.STRING){
-            throw new UDFArgumentTypeException(0,"The argument of function validate_id_card should be a string");
+        PrimitiveObjectInspector inputOI = (PrimitiveObjectInspector) objectInspectors[0];
+        if (inputOI.getPrimitiveCategory() != PrimitiveObjectInspector.PrimitiveCategory.STRING) {
+            throw new UDFArgumentTypeException(0, "The argument of function validate_id_card should be a string");
         }
 
         return PrimitiveObjectInspectorFactory.getPrimitiveWritableObjectInspector(PrimitiveObjectInspector.PrimitiveCategory.STRING);
     }
 
 
-
     @Override
     public Object evaluate(DeferredObject[] deferredObjects) throws HiveException {
-        if (deferredObjects[0] == null){
+        if (deferredObjects[0] == null) {
             return null;
         }
 
         Text inputText = (Text) deferredObjects[0].get();
-        if (inputText == null){
+        if (inputText == null) {
             return null;
         }
 
         String idCardStr = inputText.toString().trim();
-        if (!isValidLength(idCardStr)){
+        if (!isValidLength(idCardStr)) {
             return new Text("无效长度");
         }
 
-        if (!isValidLength(idCardStr)){
+        if (!isValidLength(idCardStr)) {
             return new Text("格式错误");
         }
-        if (!isValidLength(idCardStr)){
+        if (!isValidLength(idCardStr)) {
             return new Text("校验码错误");
         }
         return new Text("有效身份证");
@@ -91,7 +88,6 @@ public class TestUdfGeneric extends GenericUDF {
         int remainder = sum % 11;
         return CHECK_CODE[remainder] == idCard.charAt(17);
     }
-
 
     @Override
     public String getDisplayString(String[] strings) {

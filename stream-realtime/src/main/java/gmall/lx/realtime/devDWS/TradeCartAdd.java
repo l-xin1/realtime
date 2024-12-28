@@ -28,6 +28,11 @@ public class TradeCartAdd {
 
         DataStream<Row> rowDataStream = tEnv.toDataStream(table);
         System.out.println(rowDataStream.toString());
+
+        DataStream<Row> rowDataStream1 = tEnv.toDataStream(table);
+
+
+
         env.close();
     }
 }
