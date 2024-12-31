@@ -1,5 +1,5 @@
 package gmall.lx.realtime.test;
-
+import com.stream.common.utils.StringsUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.stream.common.utils.CommonUtils;
 import com.stream.common.utils.ConfigUtils;
@@ -18,7 +18,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
-import org.apache.hadoop.hive.metastore.utils.StringUtils;
+
 
 import java.util.HashMap;
 
@@ -106,7 +106,7 @@ public class TestNewLog {
                 String ts = jsonObject.getString("ts");
                 String curVisitDate = DateTimeUtils.tsToDate(Long.parseLong(ts));
                 if ("1".equals(isNew)) {
-                    if (StringUtils.isEmpty(lastDate)) {
+                    if (StringsUtils.isEmpty(lastDate)) {
                         //如果键控状态为null，认为本次是该访客首次访问 APP，将日志中 ts 对应的日期更新到状态中，不对 is_new 字段做修改；
                         lastState.update(curVisitDate);
                     } else {
@@ -120,7 +120,7 @@ public class TestNewLog {
                     //如果 is_new 的值为 0
                     //	如果键控状态为 null，说明访问 APP 的是老访客但本次是该访客的页面日志首次进入程序。当前端新老访客状态标记丢失时，
                     // 日志进入程序被判定为新访客，Flink 程序就可以纠正被误判的访客状态标记，只要将状态中的日期设置为今天之前即可。本程序选择将状态更新为昨日；
-                    if (StringUtils.isEmpty(lastDate)) {
+                    if (StringsUtils.isEmpty(lastDate)) {
                         String newDay = DateTimeUtils.tsToDate(Long.parseLong(ts) - 24 * 60 * 600 * 1000);
                         lastState.update(newDay);
                     }

@@ -35,7 +35,6 @@ public class DWDProcessSource {
                 " from gmallTable  where source['table']='favor_info' ");
 //        tEnv.createTemporaryView("dwd_favor_add",dwd_favor_info);
 //        tEnv.sqlQuery("select * from dwd_favor_add").execute().print();
-
     }
     public static Table getCouponUse(StreamTableEnvironment tEnv){
         DWDProcessSource.newTable(tEnv);

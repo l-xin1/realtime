@@ -14,7 +14,7 @@ mysql.user=root
 mysql.pwd=root
 
 #zookeeper
-zookeeper.server.host.list=cdh02:2181
+zookeeper.server.host.list=cdh01:2181,cdh02:2181,cdh03:2181
 
 #Hbase
 hbase.namespace=gmall
@@ -33,7 +33,7 @@ kafka.dirty.topic=topic_dirty
 kafka.page.topic=topic_page
 
 
-
+hive.conf.dir=/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources
 # flink
 flink.submit.user=
 flink.conf.configurationDirectory=

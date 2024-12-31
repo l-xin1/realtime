@@ -15,8 +15,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
- * @author weikaijun
- * @date 2021-09-27 09:52
+ *  wei kai jun
+ *  2021-09-27 09:52
  **/
 public class DingTalkUtils {
     private static List<String> BIG_DATA_GROUP_USER = Arrays.asList("15906211002", "18625256191", "13815404021");
@@ -66,7 +66,7 @@ public class DingTalkUtils {
 
     private static String getSign(Long timestamp, String secret) {
         try {
-            String stringToSign = timestamp + "\n" + secret;
+            String stringToSign = timestamp + "" + secret;
             Mac mac = Mac.getInstance("HmacSHA256");
             mac.init(new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256"));
             byte[] signData = mac.doFinal(stringToSign.getBytes(StandardCharsets.UTF_8));

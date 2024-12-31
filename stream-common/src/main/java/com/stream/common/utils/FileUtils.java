@@ -4,16 +4,15 @@ import com.alibaba.fastjson.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Properties;
+import java.net.URL;
 
 /**
- * @Package com.stream.common.utils.FileUtils
- * @Author zhou.han
- * @Date 2024/11/20 10:48
- * @description: File Utils
+ *  com.stream.common.utils.FileUtils
+ *  zhou.han
+ *  2024/11/20 10:48
+ *  File Utils
  */
 public class FileUtils {
-
     public static long getFileLastTime(String filePath){
         long time = 0;
         File file = new File(filePath);
@@ -53,6 +52,19 @@ public class FileUtils {
             ioException.printStackTrace();
         }
         return res;
+    }
+
+    public static String getResourceDicPath(){
+        ClassLoader classLoader = FileUtils.class.getClassLoader();
+        URL resource = classLoader.getResource("");
+        if (resource != null){
+            return resource.getPath();
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        System.err.println(getResourceDicPath());
     }
 
 

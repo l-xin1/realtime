@@ -22,14 +22,26 @@ public class TradeCartAdd {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(env);
 
-        Table favorAdd = DWDProcessSource.getFavorAdd(tEnv);
-        tEnv.createTemporaryView("favor_add",favorAdd);
-        Table table = tEnv.sqlQuery(" select * from favor_add");
+         DWDProcessSource.newTable(tEnv);
 
-        DataStream<Row> rowDataStream = tEnv.toDataStream(table);
-        System.out.println(rowDataStream.toString());
-
-        DataStream<Row> rowDataStream1 = tEnv.toDataStream(table);
+         //加购表
+        Table cart = tEnv.sqlQuery(" select after['id'] id," +
+                "after['user_id'] user_id," +
+                "after['sku_id'] sku_id," +
+                "after['sku_num'] sku_num," +
+                "TO_TIMESTAMP(FROM_UNIXTIME(CAST(after['order_time'] AS BIGINT)/1000)) order_time, " +
+                " times " +
+                "from gmallTable " +
+                " where source['table']='cart_info' and  cast(after['is_ordered'] as int) > 0 ");
+        tEnv.executeSql(" create table dwd_trade_cart_add ( " +
+                "id string,user_id string,sku_id string," +
+                "sku_num string,order_time TIMESTAMP(3),times TIMESTAMP(3)) with(" +
+                " 'connector'='kafka'," +
+                " 'topic'='dwd_trade_cart_add'," +
+                " 'properties.bootstrap.servers'='cdh01:9092'," +
+                " 'format'='json' " +
+                ") ");
+        cart.executeInsert("dwd_trade_cart_add");
 
 
 
