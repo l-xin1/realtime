@@ -33,7 +33,7 @@ kafka.dirty.topic=topic_dirty
 kafka.page.topic=topic_page
 
 
-hive.conf.dir=/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources
+hive.conf.dir=stream-realtime/src/main/resources
 # flink
 flink.submit.user=
 flink.conf.configurationDirectory=

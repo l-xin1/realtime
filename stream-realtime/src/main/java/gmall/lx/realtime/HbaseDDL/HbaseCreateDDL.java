@@ -31,8 +31,6 @@ public class HbaseCreateDDL {
 
     public static void main(String[] args) {
         System.setProperty("HADOOP_USER_NAME","root");
-
-
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tenv = StreamTableEnvironment.create(env);
         HiveCatalog hiveCatalog = HiveCatalogUtils.getHiveCatalog("hive-catalog");
@@ -44,8 +42,6 @@ public class HbaseCreateDDL {
         tenv.executeSql(createHbaseDimBaseDicDDL).print();
         tenv.executeSql("show tables;").print();
         tenv.executeSql("select * from hbase_dim_user_info").print();
-
-
     }
 //private static final String createHbaseDimBaseDicDDL = "create table hbase_dim_base_dic (" +
 //        "    rk string," +
