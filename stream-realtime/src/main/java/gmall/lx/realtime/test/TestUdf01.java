@@ -25,7 +25,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  */
 public class TestUdf01 {
 
-     private static final String CDH_ZOOKEEPER_SERVER = "cdh02:2181";
+     private static final String CDH_ZOOKEEPER_SERVER = "192.168.10.130:2181";
     private static final String CDH_HBASE_NAME_SPACE = "gmall";
 //    @SneakyThrows
     public static void main(String[] args) throws Exception {
@@ -34,7 +34,7 @@ public class TestUdf01 {
         env.setParallelism(1);
 
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
-                .hostname("cdh03")
+                .hostname("192.168.10.131")
                 .port(3306)
                 .databaseList("gmall") // set captured database
                 .tableList("gmall.*") // set captured table
@@ -48,7 +48,7 @@ public class TestUdf01 {
 
 
         MySqlSource<String> mysqlProcess = MySqlSource.<String>builder()
-                .hostname("cdh03")
+                .hostname("192.168.10.131")
                 .port(3306)
                 .databaseList("gmall_process") // set captured database
                 .tableList("gmall_process.table_process_dim") // set captured table
@@ -101,11 +101,11 @@ public class TestUdf01 {
         SingleOutputStreamOperator<JSONObject> streamOperator = connectDs.process(new ProcessToHbase(mapStageDesc));
         streamOperator.print();
 
-        cdcDbMainStream.sinkTo(
-                KafkaUtils.buildKafkaSink(ConfigUtils.getString("kafka.bootstrap.servers"),"realtime_v1_mysql_db")
-        ).uid("sink_to_kafka_realtime_v1_mysql_db").name("sink_to_kafka_realtime_v1_mysql_db");
+//        cdcDbMainStream.sinkTo(
+//                KafkaUtils.buildKafkaSink(ConfigUtils.getString("kafka.bootstrap.servers"),"realtime_v1_mysql_db")
+//        ).uid("sink_to_kafka_realtime_v1_mysql_db").name("sink_to_kafka_realtime_v1_mysql_db");
 
-        env.disableOperatorChaining();
+//        env.disableOperatorChaining();
         env.execute();
     }
 }

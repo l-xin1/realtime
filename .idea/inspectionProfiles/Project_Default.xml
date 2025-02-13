@@ -9,5 +9,12 @@
     <inspection_tool class="JavadocDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ADDITIONAL_TAGS" value="className:,Description:,author:,date:,Package,Author,Date,description:" />
     </inspection_tool>
+    <inspection_tool class="PyStubPackagesCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredStubPackages">
+        <list>
+          <option value="pyspark-stubs" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

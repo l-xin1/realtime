@@ -22,7 +22,8 @@ public class TestHbaseDDL {
                 ")";
         //D:\mmmm\ideam\stream-dev-realtime\stream-realtime\src\main\resources
 
-        HiveCatalog hiveCatalog = new HiveCatalog("hive-catalog", "default", "/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources");
+        HiveCatalog hiveCatalog = new HiveCatalog("hive-catalog", "default",
+                "/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources");
         tenv.registerCatalog("hive-catalog",hiveCatalog);
         tenv.useCatalog("hive-catalog");
         tenv.executeSql(createHiveCatalogDDL).print();

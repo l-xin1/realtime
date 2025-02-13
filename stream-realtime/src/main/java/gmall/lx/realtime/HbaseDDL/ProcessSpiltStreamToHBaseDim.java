@@ -1,4 +1,4 @@
-package com.retailersv1.func;
+package gmall.lx.realtime.HbaseDDL;
 
 import com.alibaba.fastjson.JSONObject;
 
@@ -7,11 +7,9 @@ import com.stream.common.utils.HbaseUtils;
 import com.stream.common.utils.JdbcUtils;
 import gmall.lx.realtime.common.TableProcessDim;
 import org.apache.flink.api.common.state.BroadcastState;
-import org.apache.flink.api.common.state.CheckpointListener;
 import org.apache.flink.api.common.state.MapStateDescriptor;
 import org.apache.flink.api.common.state.ReadOnlyBroadcastState;
 import org.apache.flink.configuration.Configuration;
-import org.apache.flink.runtime.checkpoint.Checkpoint;
 import org.apache.flink.streaming.api.functions.co.BroadcastProcessFunction;
 import org.apache.flink.util.Collector;
 import org.apache.hadoop.hbase.TableName;

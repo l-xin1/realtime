@@ -32,7 +32,7 @@ public class TestLog {
     public static void main(String[] args) {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
-        KafkaSource<String> source = KafkaNewUtil.getKafka("cdh01:9092", "topic_log", "group12");
+        KafkaSource<String> source = KafkaNewUtil.getKafka("192.168.10.129:9092", "topic_log", "group12");
 
         SingleOutputStreamOperator<String> sourceLog = env.fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source")
                 .uid("log_kafka_json_10").name("log_kafka_json_10");
@@ -56,83 +56,83 @@ public class TestLog {
                             }
                         }
                 ).map(JSONObject::parseObject).uid("log_filter_json_11").name("log_filter_json_11").setParallelism(1);
-//        logJson.print();
-        SingleOutputStreamOperator<JSONObject> streamOperator = logJson.keyBy(obj -> obj.getJSONObject("common").getString("mid"))
-                .process(new KeyedProcessFunction<String, JSONObject, JSONObject>() {
-                    private ValueState<String> state;
-
-                    @Override
-                    public void open(Configuration p) throws Exception {
-                        state = getRuntimeContext().getState(new ValueStateDescriptor<String>("stateString", String.class));
-                    }
-
-                    @Override
-                    public void processElement(JSONObject jsonObject,
-                                               KeyedProcessFunction<String, JSONObject, JSONObject>.Context context,
-                                               Collector<JSONObject> collector) throws Exception {
-                        JSONObject common = jsonObject.getJSONObject("common");
-                        String isNew = common.getString("is_new");
-                        Long ts = Long.parseLong(jsonObject.getString("ts"));
-//                        System.out.println(ts);
-                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.sss");
-                        String dateOld = dateFormat.format(ts);
-//                        System.err.println(dateOld);
-                        String firstValue = state.value();
-                        if (isNew.equals("1")) {
-                            if (firstValue == null) {
-                                state.update(dateOld);
-                            } else if (!dateOld.equals(firstValue)) {
-                                common.put("is_new", "0");
-                            }
-                        } else {
-                            if (firstValue == null) {
-                                state.update(dateFormat.format(ts - (24 * 60 * 60 * 1000)));
-                            }
-                        }
-                        collector.collect(jsonObject);
-                    }
-                }).uid("log_is_new_json_12").name("log_is_new_json_12").setParallelism(1);
-//        streamOperator.print();
-        OutputTag<JSONObject> page = new OutputTag<JSONObject>("page") {
-        };
-        OutputTag<JSONObject> display = new OutputTag<JSONObject>("display") {
-        };
-        OutputTag<JSONObject> action = new OutputTag<JSONObject>("action") {
-        };
-        OutputTag<JSONObject> err = new OutputTag<JSONObject>("err") {
-        };
-        SingleOutputStreamOperator<JSONObject> outputStreamOperator = streamOperator.process(new ProcessFunction<JSONObject, JSONObject>() {
-            @Override
-            public void processElement(JSONObject jsonObject, ProcessFunction<JSONObject, JSONObject>.Context context, Collector<JSONObject> collector) throws Exception {
-                if (jsonObject.getString("start") != null) {
-                    collector.collect(jsonObject);
-                }
-
-                if (jsonObject.getString("page") != null) {
-                    context.output(page, jsonObject);
-                }
-                if (jsonObject.getString("err") != null) {
-                    context.output(err, jsonObject);
-                }
-                if (jsonObject.getString("actions") != null) {
-                    context.output(action, jsonObject);
-                }
-                if (jsonObject.getString("displays") != null) {
-                    context.output(display, jsonObject);
-                }
-            }
-        });
-//        outputStreamOperator.print();
-//        outputStreamOperator.getSideOutput(page).print("page-?");
-//        outputStreamOperator.getSideOutput(err).print("err-?");
-//        outputStreamOperator.getSideOutput(action).print("action-?");
-//        outputStreamOperator.getSideOutput(display).print("display-?");
-
-//        outputStreamOperator.map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_start"));
-        outputStreamOperator.getSideOutput(page).map(JSONObject::toString).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092", "topic_page"));
-//        outputStreamOperator.getSideOutput(err).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_err"));
-//        outputStreamOperator.getSideOutput(action).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_action"));
-//        outputStreamOperator.getSideOutput(display).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_display"));
+        logJson.print();
+//        SingleOutputStreamOperator<JSONObject> streamOperator = logJson.keyBy(obj -> obj.getJSONObject("common").getString("mid"))
+//                .process(new KeyedProcessFunction<String, JSONObject, JSONObject>() {
+//                    private ValueState<String> state;
+//
+//                    @Override
+//                    public void open(Configuration p) throws Exception {
+//                        state = getRuntimeContext().getState(new ValueStateDescriptor<String>("stateString", String.class));
+//                    }
+//
+//                    @Override
+//                    public void processElement(JSONObject jsonObject,
+//                                               KeyedProcessFunction<String, JSONObject, JSONObject>.Context context,
+//                                               Collector<JSONObject> collector) throws Exception {
+//                        JSONObject common = jsonObject.getJSONObject("common");
+//                        String isNew = common.getString("is_new");
+//                        Long ts = Long.parseLong(jsonObject.getString("ts"));
+////                        System.out.println(ts);
+//                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.sss");
+//                        String dateOld = dateFormat.format(ts);
+////                        System.err.println(dateOld);
+//                        String firstValue = state.value();
+//                        if (isNew.equals("1")) {
+//                            if (firstValue == null) {
+//                                state.update(dateOld);
+//                            } else if (!dateOld.equals(firstValue)) {
+//                                common.put("is_new", "0");
+//                            }
+//                        } else {
+//                            if (firstValue == null) {
+//                                state.update(dateFormat.format(ts - (24 * 60 * 60 * 1000)));
+//                            }
+//                        }
+//                        collector.collect(jsonObject);
+//                    }
+//                }).uid("log_is_new_json_12").name("log_is_new_json_12").setParallelism(1);
+////        streamOperator.print();
+//        OutputTag<JSONObject> page = new OutputTag<JSONObject>("page") {
+//        };
+//        OutputTag<JSONObject> display = new OutputTag<JSONObject>("display") {
+//        };
+//        OutputTag<JSONObject> action = new OutputTag<JSONObject>("action") {
+//        };
+//        OutputTag<JSONObject> err = new OutputTag<JSONObject>("err") {
+//        };
+//        SingleOutputStreamOperator<JSONObject> outputStreamOperator = streamOperator.process(new ProcessFunction<JSONObject, JSONObject>() {
+//            @Override
+//            public void processElement(JSONObject jsonObject, ProcessFunction<JSONObject, JSONObject>.Context context, Collector<JSONObject> collector) throws Exception {
+//                if (jsonObject.getString("start") != null) {
+//                    collector.collect(jsonObject);
+//                }
+//
+//                if (jsonObject.getString("page") != null) {
+//                    context.output(page, jsonObject);
+//                }
+//                if (jsonObject.getString("err") != null) {
+//                    context.output(err, jsonObject);
+//                }
+//                if (jsonObject.getString("actions") != null) {
+//                    context.output(action, jsonObject);
+//                }
+//                if (jsonObject.getString("displays") != null) {
+//                    context.output(display, jsonObject);
+//                }
+//            }
+//        });
+////        outputStreamOperator.print();
+////        outputStreamOperator.getSideOutput(page).print("page-?");
+////        outputStreamOperator.getSideOutput(err).print("err-?");
+////        outputStreamOperator.getSideOutput(action).print("action-?");
+////        outputStreamOperator.getSideOutput(display).print("display-?");
+//
+////        outputStreamOperator.map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_start"));
+////        outputStreamOperator.getSideOutput(page).map(JSONObject::toString).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092", "topic_page"));
+////        outputStreamOperator.getSideOutput(err).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_err"));
+////        outputStreamOperator.getSideOutput(action).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_action"));
+////        outputStreamOperator.getSideOutput(display).map(m->m.toString()).sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_display"));
         env.execute();
     }
 }

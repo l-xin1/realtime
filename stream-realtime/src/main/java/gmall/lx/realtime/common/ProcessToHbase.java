@@ -32,7 +32,7 @@ public class ProcessToHbase extends BroadcastProcessFunction<JSONObject, JSONObj
     @Override
     public void open(Configuration parameters) throws Exception {
         Connection connection = JdbcUtils.getMySQLConnection(
-                "jdbc:mysql://cdh03:3306?useSSL=false",
+                "jdbc:mysql://192.168.10.131:3306?useSSL=false",
                 "root",
                 "root");
         String querySQL = "select * from gmall_process.table_process_dim";
@@ -43,7 +43,7 @@ public class ProcessToHbase extends BroadcastProcessFunction<JSONObject, JSONObj
         }
 
         connection.close();
-        HbaseUtils  hbaseUtils = new HbaseUtils("cdh02:2181");
+        HbaseUtils  hbaseUtils = new HbaseUtils("192.168.10.130:2181");
         hbaseConnection = hbaseUtils.getConnection();
     }
 

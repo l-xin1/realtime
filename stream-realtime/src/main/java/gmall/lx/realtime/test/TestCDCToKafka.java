@@ -37,22 +37,22 @@ public class TestCDCToKafka {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.enableCheckpointing(3000);
         env.setParallelism(1);
-        DataStreamSource<String> source = env.fromSource(mySqlSource, WatermarkStrategy.noWatermarks(), "MySQL Source");
+//        DataStreamSource<String> source = env.fromSource(mySqlSource, WatermarkStrategy.noWatermarks(), "MySQL Source");
 //        SingleOutputStreamOperator<String> streamOperator = source.filter(m -> JSONObject.parseObject(m).getJSONObject("source").getString("table").equals("order_detail"));
 //        streamOperator.print();
-        source.print();
+//        source.print();
 //        source.sinkTo(KafkaNewUtil.toSinkKafka("cdh01:9092","topic_db"));
-//        KafkaSource<String> source = KafkaSource.<String>builder()
-//                .setBootstrapServers("cdh01:9092")
-//                .setTopics("topic_db")
-//                .setGroupId("my-group")
-//                .setStartingOffsets(OffsetsInitializer.earliest())
-//                .setValueOnlyDeserializer(new SimpleStringSchema())
-//                .build();
-//
-//        DataStreamSource<String> kafkaSource = env.fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
+        KafkaSource<String> source = KafkaSource.<String>builder()
+                .setBootstrapServers("cdh01:9092")
+                .setTopics("topic_db")
+                .setGroupId("my-group")
+                .setStartingOffsets(OffsetsInitializer.earliest())
+                .setValueOnlyDeserializer(new SimpleStringSchema())
+                .build();
+
+        DataStreamSource<String> kafkaSource = env.fromSource(source, WatermarkStrategy.noWatermarks(), "Kafka Source");
 //        SingleOutputStreamOperator<String> streamOperator = kafkaSource.filter(m -> JSONObject.parseObject(m).getJSONObject("source").getString("table").equals("order_detail"));
-//        streamOperator.print();
+        kafkaSource.print();
 
 
         env.execute();

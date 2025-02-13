@@ -1,0 +1,21 @@
+[2024-12-30 20:29:03]-[INFO]-[main] org.apache.hadoop.hive.conf.HiveConf.findConfigFile(HiveConf.java:187): Found configuration file file:/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/target/classes/hive-site.xml
+[2024-12-30 20:29:03]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.createHiveConf(HiveCatalog.java:263): Setting hive conf dir as /D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources
+[2024-12-30 20:29:04]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.<init>(HiveCatalog.java:225): Created HiveCatalog 'hive-catalog'
+[2024-12-30 20:29:04]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:405): Trying to connect to metastore with URI thrift://cdh02:9083
+[2024-12-30 20:29:04]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:479): Opened a connection to metastore, current connections: 1
+[2024-12-30 20:29:04]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:532): Connected to metastore.
+[2024-12-30 20:29:04]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.open(HiveCatalog.java:304): Connected to Hive metastore
+[2024-12-30 20:29:15]-[INFO]-[main] org.apache.hadoop.hive.conf.HiveConf.findConfigFile(HiveConf.java:187): Found configuration file file:/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/target/classes/hive-site.xml
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.createHiveConf(HiveCatalog.java:263): Setting hive conf dir as /D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.<init>(HiveCatalog.java:225): Created HiveCatalog 'hive-catalog'
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:405): Trying to connect to metastore with URI thrift://cdh02:9083
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:479): Opened a connection to metastore, current connections: 1
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:532): Connected to metastore.
+[2024-12-30 20:29:16]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.open(HiveCatalog.java:304): Connected to Hive metastore
+[2024-12-30 20:31:49]-[INFO]-[main] org.apache.hadoop.hive.conf.HiveConf.findConfigFile(HiveConf.java:187): Found configuration file file:/D:/mmmm/ideam/stream-dev-realtime/stream-realtime/target/classes/hive-site.xml
+[2024-12-30 20:31:49]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.createHiveConf(HiveCatalog.java:263): Setting hive conf dir as /D:/mmmm/ideam/stream-dev-realtime/stream-realtime/src/main/resources
+[2024-12-30 20:31:50]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.<init>(HiveCatalog.java:225): Created HiveCatalog 'hive-catalog'
+[2024-12-30 20:31:50]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:405): Trying to connect to metastore with URI thrift://cdh02:9083
+[2024-12-30 20:31:50]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:479): Opened a connection to metastore, current connections: 1
+[2024-12-30 20:31:50]-[INFO]-[main] org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:532): Connected to metastore.
+[2024-12-30 20:31:50]-[INFO]-[main] org.apache.flink.table.catalog.hive.HiveCatalog.open(HiveCatalog.java:304): Connected to Hive metastore

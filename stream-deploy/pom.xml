@@ -108,6 +108,11 @@
             <artifactId>hadoop-client</artifactId>
             <version>3.0.0-cdh6.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>

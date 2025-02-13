@@ -38,8 +38,6 @@ public class TestNewDB {
                 ConfigUtils.getString("mysql.pwd"),
                 StartupOptions.initial());
         DataStreamSource<String> dataStreamSource = env.fromSource(mysqlSource, WatermarkStrategy.noWatermarks(), "sourceTables");
-
-
         MySqlSource<String> mysqlSourceDwdDS = MysqlCDCSource.getMysqlSource(
                 ConfigUtils.getString("mysql.database.dwd"),
                 ConfigUtils.getString("mysql.table.dwd"),
@@ -48,14 +46,10 @@ public class TestNewDB {
                 StartupOptions.initial()
         );
         DataStreamSource<String> dataStreamSourceDwdDS = env.fromSource(mysqlSourceDwdDS, WatermarkStrategy.noWatermarks(), "process_dwd");
-
-
         SingleOutputStreamOperator<JSONObject> dataStreamSourceMapDS = dataStreamSource.map(JSONObject::parseObject)
                 .uid("map_json_data_source").name("map_json_data_source");
-
         SingleOutputStreamOperator<JSONObject> dataStreamSourceDwdMapDS = dataStreamSourceDwdDS.map(JSONObject::parseObject)
                 .uid("map_json_data_source_dwd").name("map_json_data_source_dwd");
-//
 //        SingleOutputStreamOperator<JSONObject> tpDS = dataStreamSourceDwdMapDS.map(m -> {
 //            m.remove("source");
 //            JSONObject jsonObj = new JSONObject();
